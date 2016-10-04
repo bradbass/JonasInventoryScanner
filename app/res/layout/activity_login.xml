@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+    <LinearLayout
+            android:id="@+id/loginScreen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/officialbackgroundwithlogo_25bright45contrast"
+            android:orientation="vertical"
+            android:padding="10dip" >
+        <!--  View Title Label -->
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:text="@string/login_label"
+                android:textColor="#ffffff"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+        <!--  Email Label -->
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+                android:text="@string/username_label"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+            android:textStyle="bold" />
+        <!--  Email TextField -->
+        <EditText
+                android:id="@+id/loginUsername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:inputType="text"/>
+
+        <!--  Password Label -->
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:text="@string/password_label"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+            android:textStyle="bold" />
+        <!--  Password TextField -->
+        <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:password="true" android:inputType="textPassword"/>
+
+        <!--  Error message -->
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Remember Me?"
+            android:id="@+id/rememberMe" />
+
+        <!--<TextView android:id="@+id/login_error"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="#e30000"
+                  android:padding="10dip"
+            android:layout_marginTop="10dip"
+                  android:textStyle="bold"/> -->
+
+        <!--  Login Button -->
+        <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/roundbutton"
+                android:text="@string/login_button" />
+
+        <TextView android:id="@+id/forgot_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Login"
+            android:clickable="true"
+            android:padding="10dip"
+            android:layout_marginTop="5dip"
+            android:textStyle="bold"
+            android:enabled="true" />
+
+        <TextView
+            android:id="@+id/securityTokenHeading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Security Token"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <!--  Email TextField -->
+        <EditText
+            android:id="@+id/loginSecurityToken"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:inputType="text"/>
+
+    </LinearLayout>
+
+</LinearLayout>
