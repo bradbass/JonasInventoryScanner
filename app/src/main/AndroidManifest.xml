@@ -62,8 +62,6 @@
             android:screenOrientation="portrait"
             android:label="Settings" >
         </activity>
-        <activity android:name=".WebServiceDemo" android:label="WebServiceDemo"
-            android:screenOrientation="portrait"/>
         <activity android:name=".UploadActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".TransferActivity"

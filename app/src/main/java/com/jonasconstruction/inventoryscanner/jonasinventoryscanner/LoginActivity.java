@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -49,11 +48,11 @@ public class LoginActivity extends Activity {
 
     private final Crypter crypter = new Crypter();
 
-    static EditText _loginUsername;
-    static EditText _loginPassword;
-    static EditText _securityToken;
-    static CheckBox _rememberMe;
-    static TextView _secTokenHeading;
+    EditText _loginUsername;
+    EditText _loginPassword;
+    EditText _securityToken;
+    CheckBox _rememberMe;
+    TextView _secTokenHeading;
 
     static String _uname;
     static String _pword;
@@ -65,9 +64,6 @@ public class LoginActivity extends Activity {
     static String _message;
 
     private DatabaseHandler dbh;
-
-    //JSONParser jp = new JSONParser();
-    //JSONObject jo;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
