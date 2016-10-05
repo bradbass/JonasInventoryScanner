@@ -7,7 +7,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -17,7 +16,6 @@ import android.widget.Toast;
 import java.util.List;
 
 import static android.widget.Toast.LENGTH_LONG;
-import static com.jonasconstruction.inventoryscanner.jonasinventoryscanner.ReportActivity._record;
 
 /**
  * Created by braba on 11/24/2015.
