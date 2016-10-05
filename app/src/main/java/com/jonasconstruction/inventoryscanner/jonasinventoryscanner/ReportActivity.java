@@ -274,31 +274,18 @@ public class ReportActivity extends Activity {
         AlertDialog.Builder aDB = new AlertDialog.Builder(this);
         aDB.setTitle("Edit/Delete Current Record?");
         aDB.setMessage("Would you like to Edit or Delete the current record?");
-        aDB.setNegativeButton("EDIT", new DialogInterface.OnClickListener() {
-
-            @SuppressWarnings("ConstantConditions")
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //launch corresponding activity and populate fields
-                editRecord();
-            }
+        aDB.setNegativeButton("EDIT", (dialog, which) -> {
+            //launch corresponding activity and populate fields
+            editRecord();
         });
-        aDB.setNeutralButton("DELETE", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //remove the individual record
-                getTableName((int) _index);
-                deleteOne(_tableName,  Integer.valueOf(_recordIndex));
-                //makeText(getApplicationContext(), "This record has been deleted!", LENGTH_LONG).show();
-            }
+        aDB.setNeutralButton("DELETE", (dialog, which) -> {
+            //remove the individual record
+            getTableName((int) _index);
+            deleteOne(_tableName,  Integer.valueOf(_recordIndex));
+            //makeText(getApplicationContext(), "This record has been deleted!", LENGTH_LONG).show();
         });
-        aDB.setPositiveButton("CANCEL", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //cancel - do nothing
-            }
+        aDB.setPositiveButton("CANCEL", (dialog, which) -> {
+            //cancel - do nothing
         });
         aDB.show();
     }
@@ -355,31 +342,22 @@ public class ReportActivity extends Activity {
         AlertDialog.Builder aDB = new AlertDialog.Builder(this);
         aDB.setTitle("Delete Current Record?");
         aDB.setMessage("Are you sure you want to delete the current record?");
-        aDB.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-
-            @SuppressWarnings("ConstantConditions")
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // When user clicks OK, the db is purged and user is sent back to main activity.
-                try {
-                    dbh.deleteOne(tableName, index+1);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                //dbh.deleteOne("reportData", (int) _index);
-                //clearVars();
-                _deleted = true;
-                populateListView();
-                //makeText(getApplicationContext(), "This record has been deleted!", LENGTH_LONG).show();
+        aDB.setPositiveButton("YES", (dialog, which) -> {
+            // When user clicks OK, the db is purged and user is sent back to main activity.
+            try {
+                dbh.deleteOne(tableName, index+1);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+            //dbh.deleteOne("reportData", (int) _index);
+            //clearVars();
+            _deleted = true;
+            populateListView();
+            //makeText(getApplicationContext(), "This record has been deleted!", LENGTH_LONG).show();
         });
-        aDB.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // If user clicks NO, dialog is closed.
-                dialog.cancel();
-            }
+        aDB.setNegativeButton("NO", (dialog, which) -> {
+            // If user clicks NO, dialog is closed.
+            dialog.cancel();
         });
         aDB.show();
     }
