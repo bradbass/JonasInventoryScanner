@@ -64,13 +64,10 @@ public class HomeActivity extends Activity {
     private static String _filename;
     private static Integer _tableNum;
     private final Crypter crypter = new Crypter();
-    //private Boolean save = false;
 
     private static DatabaseHandler _dbh;
-    //static String _currentDateTime;
     static String _currentDate;
     static String _currentTime;
-    //private android.database.sqlite.SQLiteDatabase db;
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {

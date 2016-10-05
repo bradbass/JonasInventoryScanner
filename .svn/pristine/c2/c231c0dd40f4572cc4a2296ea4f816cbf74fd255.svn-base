@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="21"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="21102154180452"
+    token="3465135661741967622"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="1228" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="1257" />
+    <task
+        name="verifier"
+        duration="473" />
+
+    <artifact
+        location="C:\Android\JonasScanner\svn\JonasInventoryScanner\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="21102154180452"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Android\JonasScanner\svn\JonasInventoryScanner\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 ef99c963cf34e5f9183ba2cb04cb7b6a855e49bd Brad Bass <braba@gjonas.com> 1475599817 -0400	commit (initial): First commit
+ef99c963cf34e5f9183ba2cb04cb7b6a855e49bd 86a2e85651e570ab7619ad32dca36c8bf4af66fc bradbass <brad.bass@jonasconstruction.com> 1475606439 -0400	commit: First commit
+86a2e85651e570ab7619ad32dca36c8bf4af66fc 93319addb1a2c534e5e0fd9df121b162cb2fa490 bradbass <brad.bass@jonasconstruction.com> 1475671366 -0400	commit: Added some Lambdas and testing new svn.
+93319addb1a2c534e5e0fd9df121b162cb2fa490 6a7db174359044e1f2d5f1d06821f1c761c8b1a7 bradbass <brad.bass@jonasconstruction.com> 1475673825 -0400	commit: Removed some unused imports.

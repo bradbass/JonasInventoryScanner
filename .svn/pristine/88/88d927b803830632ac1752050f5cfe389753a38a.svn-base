@@ -1,0 +1,265 @@
+<TableLayout
+        android:useDefaultMargins="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:padding="20dp"
+        android:background="@drawable/officialbackgroundwithlogo_25bright45contrast"
+    >
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charge Parts"
+            android:id="@+id/chargeBtn"
+            android:layout_column="0"
+            android:background="@drawable/roundbutton"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:singleLine="false" />
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="10dp"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/chargeSendAllBtn"
+            android:layout_column="2"
+            android:src="@drawable/ic_action_email_dark"
+            android:background="@drawable/roundbutton" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_column="3" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/chargeDeleteAllBtn"
+            android:layout_column="4"
+            android:src="@drawable/ic_action_discard_dark"
+            android:background="@drawable/roundbutton" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whse Transfer"
+            android:id="@+id/transferBtn"
+            android:layout_column="0"
+            android:background="@drawable/roundbutton"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/transferSendAllBtn"
+            android:layout_column="2"
+            android:src="@drawable/ic_action_email_dark"
+            android:background="@drawable/roundbutton" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="3" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/transferDeleteAllBtn"
+            android:layout_column="4"
+            android:src="@drawable/ic_action_discard_dark"
+            android:background="@drawable/roundbutton" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receive P/O"
+            android:id="@+id/receiveBtn"
+            android:layout_column="0"
+            android:paddingLeft="19.5dp"
+            android:paddingRight="19.5dp"
+            android:background="@drawable/roundbutton" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/receiveSendAllBtn"
+            android:layout_column="2"
+            android:src="@drawable/ic_action_email_dark"
+            android:background="@drawable/roundbutton" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="3" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/receiveDeleteAllBtn"
+            android:layout_column="4"
+            android:src="@drawable/ic_action_discard_dark"
+            android:background="@drawable/roundbutton" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parts Upload"
+            android:id="@+id/uploadBtn"
+            android:layout_column="0"
+            android:background="@drawable/roundbutton"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"/>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/uploadSendAllBtn"
+            android:layout_column="2"
+            android:src="@drawable/ic_action_email_dark"
+            android:background="@drawable/roundbutton" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="3" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/uploadDeleteAllBtn"
+            android:layout_column="4"
+            android:src="@drawable/ic_action_discard_dark"
+            android:background="@drawable/roundbutton" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_column="0" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventory"
+            android:id="@+id/inventoryCountBtn"
+            android:layout_column="0"
+            android:background="@drawable/roundbutton"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"/>
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="1" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/inventoryCountSendAllBtn"
+            android:layout_column="2"
+            android:src="@drawable/ic_action_email_dark"
+            android:background="@drawable/roundbutton" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_column="3" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:id="@+id/inventoryCountDeleteAllBtn"
+            android:layout_column="4"
+            android:src="@drawable/ic_action_discard_dark"
+            android:background="@drawable/roundbutton" />
+    </TableRow>
+
+</TableLayout>
