@@ -78,12 +78,12 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
     //static ArrayAdapter<String> dataAdapter;
 
     //private static EditText _installField;
-    private static EditText _jobWoField;
-    private static EditText _quantityField;
-    private static EditText _serialField;
-    private static EditText _commentField;
-    private static EditText _scanField;
-    private static TextView _dateField;
+    private EditText _jobWoField;
+    private EditText _quantityField;
+    private EditText _serialField;
+    private EditText _commentField;
+    private EditText _scanField;
+    private TextView _dateField;
     private static String _currentDate;
 
     //DatabaseHandler dbh = new DatabaseHandler(getApplicationContext());
