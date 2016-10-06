@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 282bef2ea9e6a2c69c91e6a084b51c8dfe5b8c73 bradbass <brad.bass@jonasconstruction.com> 1475601842 -0400	commit (initial): Added missing resource and build files.
-282bef2ea9e6a2c69c91e6a084b51c8dfe5b8c73 c1e41ce50f3f46056138648870cfc056f00364d4 bradbass <brad.bass@jonasconstruction.com> 1475602265 -0400	commit: Added missing resource and build files.
-c1e41ce50f3f46056138648870cfc056f00364d4 65c5a175f52e2dd1bee25d484327fc4b77110161 bradbass <brad.bass@jonasconstruction.com> 1475602580 -0400	commit: Removed some static fields due to possible memory leak.
-65c5a175f52e2dd1bee25d484327fc4b77110161 7f5739e76f11549cbc400b4d8f5fd53d774f63db bradbass <brad.bass@jonasconstruction.com> 1475603029 -0400	commit: Removed some static fields due to possible memory leak.
-7f5739e76f11549cbc400b4d8f5fd53d774f63db 2c0664b4b798494621a1f7d817e39b84bd2b0dc4 bradbass <brad.bass@jonasconstruction.com> 1475670504 -0400	commit: Added a couple lambdas. Testing new SVN.
