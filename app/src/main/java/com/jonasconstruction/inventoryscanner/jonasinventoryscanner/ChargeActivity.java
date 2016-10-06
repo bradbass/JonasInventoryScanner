@@ -156,12 +156,7 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
 
         checkFromReport();
 
-        _dateField.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDatePickerDialog();
-            }
-        });
+        _dateField.setOnClickListener(view -> showDatePickerDialog());
 
         /**
          * When user clicks the SCAN button, we start a new intent which invokes the 
@@ -180,53 +175,41 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
 			}
 		});*/
 
-        serialBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
-                //chargeIntent.putExtra("SCAN_MODE", "PRODUCT_MODE");
-                //startActivityForResult(chargeIntent, 1);
-                //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
-                //startActivityForResult(intent, 1);
-                Intent intent = new Intent(Scan.ACTION);
-                startActivityForResult(intent, 1);
-            }
+        serialBtn.setOnClickListener(v -> {
+            //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
+            //chargeIntent.putExtra("SCAN_MODE", "PRODUCT_MODE");
+            //startActivityForResult(chargeIntent, 1);
+            //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
+            //startActivityForResult(intent, 1);
+            Intent intent = new Intent(Scan.ACTION);
+            startActivityForResult(intent, 1);
         });
 
-        partUpcBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
-                //chargeIntent.putExtra("SCAN_MODE", "PRODUCT_MODE");
-                //startActivityForResult(chargeIntent, 2);
-                //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
-                Intent intent = new Intent(Scan.ACTION);
-                startActivityForResult(intent, 2);
-            }
+        partUpcBtn.setOnClickListener(v -> {
+            //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
+            //chargeIntent.putExtra("SCAN_MODE", "PRODUCT_MODE");
+            //startActivityForResult(chargeIntent, 2);
+            //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
+            Intent intent = new Intent(Scan.ACTION);
+            startActivityForResult(intent, 2);
         });
 
-        scanSerialBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
-                //startActivityForResult(chargeIntent, 1);
-                //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
-                //startActivityForResult(intent, 1);
-                Intent intent = new Intent(Scan.ACTION);
-                startActivityForResult(intent, 1);
-            }
+        scanSerialBtn.setOnClickListener(v -> {
+            //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
+            //startActivityForResult(chargeIntent, 1);
+            //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
+            //startActivityForResult(intent, 1);
+            Intent intent = new Intent(Scan.ACTION);
+            startActivityForResult(intent, 1);
         });
 
-        scanUpcBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
-                //Intent chargeIntent = new Intent(Scan.ACTION);
-                //startActivityForResult(chargeIntent, 2);
-                //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
-                Intent intent = new Intent(Scan.ACTION);
-                startActivityForResult(intent, 2);
-            }
+        scanUpcBtn.setOnClickListener(v -> {
+            //Intent chargeIntent = new Intent("com.google.zxing.client.android.SCAN");
+            //Intent chargeIntent = new Intent(Scan.ACTION);
+            //startActivityForResult(chargeIntent, 2);
+            //Intent intent = new Intent(ChargeActivity.this, ScanActivity.class);
+            Intent intent = new Intent(Scan.ACTION);
+            startActivityForResult(intent, 2);
         });
 
         /**
@@ -259,40 +242,28 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
 		    }
 	    });*/
 
-        firstBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // cursor.moveToFirst()
-                _db.moveToFirst("chrgData", 1);
-                populateFields();
-            }
+        firstBtn.setOnClickListener(view -> {
+            // cursor.moveToFirst()
+            _db.moveToFirst("chrgData", 1);
+            populateFields();
         });
 
-        nextBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // cursor.moveToNext()
-                _db.moveToNext("chrgData", getBaseContext(), 1);
-                populateFields();
-            }
+        nextBtn.setOnClickListener(view -> {
+            // cursor.moveToNext()
+            _db.moveToNext("chrgData", getBaseContext(), 1);
+            populateFields();
         });
 
-        prevBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // cursor.moveToPrevious()
-                _db.moveToPrevious("chrgData", getBaseContext(), 1);
-                populateFields();
-            }
+        prevBtn.setOnClickListener(view -> {
+            // cursor.moveToPrevious()
+            _db.moveToPrevious("chrgData", getBaseContext(), 1);
+            populateFields();
         });
 
-        lastBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // cursor.moveToLast()
-                _db.moveToLast("chrgData", 1);
-                populateFields();
-            }
+        lastBtn.setOnClickListener(view -> {
+            // cursor.moveToLast()
+            _db.moveToLast("chrgData", 1);
+            populateFields();
         });
 
         /*delAllBtn.setOnClickListener(new OnClickListener() {
@@ -304,22 +275,16 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
             }
         });*/
 
-        delBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //delete only the current record
-                deleteOne();
-                clearFields();
-                _quantityField.setText("1");
-            }
+        delBtn.setOnClickListener(v -> {
+            //delete only the current record
+            deleteOne();
+            clearFields();
+            _quantityField.setText("1");
         });
 
-        clrBtn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clearFields();
-                _quantityField.setText("1");
-            }
+        clrBtn.setOnClickListener(v -> {
+            clearFields();
+            _quantityField.setText("1");
         });
     }
 
@@ -391,12 +356,7 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
         AlertDialog.Builder aDB = new AlertDialog.Builder(this);
         aDB.setTitle("Invalid Field Found!");
         aDB.setMessage("The " + field + " is a required field and must be filled out.");
-        aDB.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-            @SuppressWarnings("ConstantConditions")
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
+        aDB.setPositiveButton("OK", (dialog, which) -> {
         });
         aDB.show();
     }
@@ -430,24 +390,15 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
         Builder aDB = new Builder(this);
         aDB.setTitle("Delete Current Record?");
         aDB.setMessage("Are you sure you want to delete the current record?");
-        aDB.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-
-            @SuppressWarnings("ConstantConditions")
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // When user clicks OK, the db is purged and user is sent back to main activity.
-                dbh.deleteOne("chrgData");
-                clearVars();
-                makeText(getApplicationContext(), "This record has been deleted!", LENGTH_LONG).show();
-            }
+        aDB.setPositiveButton("YES", (dialog, which) -> {
+            // When user clicks OK, the db is purged and user is sent back to main activity.
+            dbh.deleteOne("chrgData");
+            clearVars();
+            makeText(getApplicationContext(), "This record has been deleted!", LENGTH_LONG).show();
         });
-        aDB.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // If user clicks NO, dialog is closed.
-                dialog.cancel();
-            }
+        aDB.setNegativeButton("NO", (dialog, which) -> {
+            // If user clicks NO, dialog is closed.
+            dialog.cancel();
         });
         aDB.show();
     }
@@ -469,24 +420,15 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
         Builder aDB = new Builder(this);
         aDB.setTitle("Delete All Records?");
         aDB.setMessage("Are you sure you want to delete all the records you've created?");
-        aDB.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-
-            @SuppressWarnings("ConstantConditions")
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // When user clicks OK, the db is purged and user is sent back to main activity.
-                dbh.deleteAll("chrgData");
-                clearVars();
-                makeText(getApplicationContext(), "All records have been deleted!", LENGTH_LONG).show();
-            }
+        aDB.setPositiveButton("YES", (dialog, which) -> {
+            // When user clicks OK, the db is purged and user is sent back to main activity.
+            dbh.deleteAll("chrgData");
+            clearVars();
+            makeText(getApplicationContext(), "All records have been deleted!", LENGTH_LONG).show();
         });
-        aDB.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // If user clicks NO, dialog is closed.
-                dialog.cancel();
-            }
+        aDB.setNegativeButton("NO", (dialog, which) -> {
+            // If user clicks NO, dialog is closed.
+            dialog.cancel();
         });
         aDB.show();
     }
@@ -539,13 +481,7 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
             Builder aDB = new Builder(this);
             aDB.setTitle(getString(R.string.savemsg_dialog_title));
             aDB.setMessage(getString(R.string.savemsg_window_message));
-            aDB.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
+            aDB.setPositiveButton("OK", (dialog, which) -> dialog.cancel());
             aDB.show();
         }
         //}
@@ -685,7 +621,7 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
 	         //String scanResult = intent.getStringExtra("SCAN_RESULT");
              //String scanResult = ScanActivity._barcode;
               String scanResult = intent.getStringExtra(Scan.BARCODE);
-              String barcodeFormat = intent.getStringExtra(Scan.Pro.FORMAT);
+              //String barcodeFormat = intent.getStringExtra(Scan.Pro.FORMAT);
 	         //String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
 	         // Handle successful scan
 	         //EditText code =(EditText)findViewById(R.id.scanField);
@@ -799,7 +735,7 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
                     makeText(ChargeActivity.this, getString(R.string.toast_email_fail_message), LENGTH_LONG).show();
                 } else {
                     makeText(ChargeActivity.this, getString(R.string.toast_email_success_message), LENGTH_LONG).show();
-                    Boolean sent = true;
+                    //Boolean sent = true;
                     db.purgeData(1);
                 }
             } catch (final Exception e) {
@@ -812,12 +748,8 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
                 Builder aDB = new Builder(this);
                 aDB.setTitle("Program Exception!");
                 aDB.setMessage(stackTrace);
-                aDB.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // When user clicks OK, the db is purged and user is sent back to main activity.
-                    }
+                aDB.setPositiveButton("OK", (dialog, which) -> {
+                    // When user clicks OK, the db is purged and user is sent back to main activity.
                 });
                 aDB.show();
             }
