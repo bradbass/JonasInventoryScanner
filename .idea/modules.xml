@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JonasInventoryScanner.iml" filepath="$PROJECT_DIR$/JonasInventoryScanner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JonasScanner.iml" filepath="$PROJECT_DIR$/JonasScanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
