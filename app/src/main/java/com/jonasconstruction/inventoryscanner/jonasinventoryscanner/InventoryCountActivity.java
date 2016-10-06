@@ -85,7 +85,7 @@ public class InventoryCountActivity extends Activity {
                 //remove part count
             });
             aDB.setNegativeButton("Cancel", (dialog, which) -> {
-                //cancel 
+                //cancel
             });
             aDB.show();
         });
