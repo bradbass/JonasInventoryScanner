@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import java.util.TimeZone;
 
@@ -662,8 +663,8 @@ public class ChargeActivity extends Activity implements OnItemSelectedListener, 
 		Log.w("DatePicker",year + " / " + (month+1) + " / " + day);
 		((EditText) findViewById(R.id.installField)).setText(year + " / " + (month+1) + " / " + day);
 		date = year + "" + (month+1) + "" + day;
-		String _month = String.format("%02d", month+1);
-		String _day = String.format("%02d", day);
+		String _month = String.format(String.valueOf(Locale.getDefault()), month+1);
+		String _day = String.format(String.valueOf(Locale.getDefault()), day);
 		_date = year + "" + _month + "" + _day;
     }
 
