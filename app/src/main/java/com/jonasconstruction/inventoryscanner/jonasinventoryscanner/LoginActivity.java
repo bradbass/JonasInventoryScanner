@@ -185,7 +185,7 @@ public class LoginActivity extends Activity {
     class LoginOperation extends AsyncTask<String, Void, String> {
 
         private ProgressDialog Dialog = new ProgressDialog(LoginActivity.this);
-        public SoapPrimitive response;
+        SoapPrimitive response;
 
         @Override
         protected String doInBackground(String... params) {
