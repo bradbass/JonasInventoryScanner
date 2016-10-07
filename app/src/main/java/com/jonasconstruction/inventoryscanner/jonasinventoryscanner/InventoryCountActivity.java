@@ -116,6 +116,7 @@ public class InventoryCountActivity extends Activity implements AdapterView.OnIt
             _index = _listView.getItemIdAtPosition(position);
 
             //TODO - either decrement the count or delete the whole record so they have to recount the part
+            //use the _index above to find the record in the db.
             //dialog - decrement by 1 or remove part and recount
             AlertDialog.Builder aDB = new AlertDialog.Builder(this);
             aDB.setTitle("Part Correction");
