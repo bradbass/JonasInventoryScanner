@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,7 +29,6 @@ import java.util.Random;
 import java.util.TimeZone;
 
 import static android.app.AlertDialog.Builder;
-import static android.view.View.OnClickListener;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.makeText;
 
