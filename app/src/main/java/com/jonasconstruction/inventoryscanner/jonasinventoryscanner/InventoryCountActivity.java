@@ -119,7 +119,7 @@ public class InventoryCountActivity extends Activity implements AdapterView.OnIt
             //dialog - decrement by 1 or remove part and recount
             AlertDialog.Builder aDB = new AlertDialog.Builder(this);
             aDB.setTitle("Part Correction");
-            aDB.setMessage("A missing dependency has been detected.  Click YES to install.");
+            aDB.setMessage("Would you like to decrement the count or remove the count?");
             aDB.setPositiveButton("Decrement", (dialog, which) -> {
                 //decrement part count
             });
