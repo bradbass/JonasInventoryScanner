@@ -89,6 +89,7 @@ public class LoginActivity extends Activity {
         }
 
         loginBtn.setOnClickListener(view -> {
+            // TODO - do we need this?
             _isAdminLogin = false;
             if (_loginUsername.getText().toString().equals("gjadmin")) {
                 if (_loginPassword.getText().toString().equals("gjadmin")) {
