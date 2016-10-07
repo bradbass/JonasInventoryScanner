@@ -8,8 +8,8 @@ android {
         applicationId "com.jonasconstruction.inventoryscanner.jonasinventoryscanner"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 204
-        versionName "1.203"
+        versionCode 205
+        versionName "1.204"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {
             enabled true

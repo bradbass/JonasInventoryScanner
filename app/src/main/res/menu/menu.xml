@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item 
         android:id="@+id/action_save" 
         android:title="@string/save_label"
         android:icon="@drawable/save"
-        app:showAsAction="always|withText"
+        android:showAsAction="always"
         android:orderInCategory="100" >
         
     </item>
@@ -13,7 +12,7 @@
         android:id="@+id/send_test_email"
         android:title="@string/test_label"
         android:icon="@drawable/ic_action_mail_add"
-        app:showAsAction="always|withText"
+        android:showAsAction="always"
         android:orderInCategory="10" >
 
     </item>

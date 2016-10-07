@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/action_home"
         android:title="@string/home_label"
         android:icon="@drawable/ic_menu_back"
-        app:showAsAction="always|withText"
-        android:orderInCategory="10" >
+        android:showAsAction="always"
+        android:orderInCategory="10"
+        android:visible="true"
+        android:enabled="true">
 
     </item>
     <item
         android:id="@+id/action_save"
         android:title="@string/save_label"
         android:icon="@drawable/save"
-        app:showAsAction="always|withText"
-        android:orderInCategory="1" >
+        android:showAsAction="always"
+        android:orderInCategory="1"
+        android:visible="true"
+        android:enabled="true">
 
     </item>
 </menu>
