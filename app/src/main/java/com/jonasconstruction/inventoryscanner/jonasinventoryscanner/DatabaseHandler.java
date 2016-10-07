@@ -35,7 +35,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 		
     public static List<String> _dataTables;
     // Database Version
-    private static final int DATABASE_VERSION = 30;
+    private static final int DATABASE_VERSION = 31;
  
     // Database Name
     private static final String DATABASE_NAME = "jonasScanner";
@@ -206,6 +206,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final String CREATE_INVENTORY_COUNT_TABLE = "CREATE TABLE " + TABLE_INVENTORY_COUNT + "("
             + COLUMN_KEY + " INTEGER PRIMARY KEY,"
+            + COLUMN_WHSE + " TEXT,"
             + COLUMN_UPC + " TEXT,"
             + COLUMN_QUANTITY + " TEXT)";
 
@@ -696,13 +697,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void saveToDb(String upc, int quantity) {
+    public void saveToDb(String whse, String upc, int quantity) {
         //do stuff
         SQLiteDatabase db = this.getWritableDatabase();
 
         getKey(TABLE_INVENTORY_COUNT);
 
         ContentValues values = new ContentValues();
+        values.put(COLUMN_WHSE, whse);
         values.put(COLUMN_UPC, upc);
         values.put(COLUMN_QUANTITY, quantity);
 
@@ -1057,6 +1059,33 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
     }
 
+    public void inventoryCount(int recordNum) {
+        // populate the fields using the cursor position
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+
+        assert db != null;
+        try {
+            cursor = db.query(TABLE_INVENTORY_COUNT, null, null, null, null, null, null);
+            cursor.moveToPosition(recordNum);
+
+            String _whse = cursor.getString(cursor.getColumnIndex(COLUMN_WHSE));
+
+            InventoryCountActivity ic = new InventoryCountActivity();
+
+            ic.setWHSE(_whse);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            //db.endTransaction();
+            db.close();
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+    }
+
     void populateReport() {
         SQLiteDatabase db = this.getReadableDatabase();
         ReportActivity ra = new ReportActivity();
@@ -1327,16 +1356,41 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             cursor = db.query(TABLE_DEFAULTS, null, null, null, null, null, null);
             cursor.moveToPosition(0);
 
-            String _whse = cursor.getString(cursor.getColumnIndex(COLUMN_WHSE));
-            String _type = cursor.getString(cursor.getColumnIndex(COLUMN_TYPE));
-            String _item = cursor.getString(cursor.getColumnIndex(COLUMN_ITEM));
-            String _jobWo = cursor.getString(cursor.getColumnIndex(COLUMN_JOB_WO_NUM));
+            String _whse;
+            try {
+                _whse = cursor.getString(cursor.getColumnIndex(COLUMN_WHSE));
+            } catch (Exception e) {
+                e.printStackTrace();
+                _whse = "";
+            }
+            String _type;
+            try {
+                _type = cursor.getString(cursor.getColumnIndex(COLUMN_TYPE));
+            } catch (Exception e) {
+                e.printStackTrace();
+                _type = "";
+            }
+            String _item;
+            try {
+                _item = cursor.getString(cursor.getColumnIndex(COLUMN_ITEM));
+            } catch (Exception e) {
+                e.printStackTrace();
+                _item = "";
+            }
+            String _jobWo;
+            try {
+                _jobWo = cursor.getString(cursor.getColumnIndex(COLUMN_JOB_WO_NUM));
+            } catch (Exception e) {
+                e.printStackTrace();
+                _jobWo = "";
+            }
 
             ConfigActivity ca = new ConfigActivity();
             ChargeActivity chrg = new ChargeActivity();
             UploadActivity ua = new UploadActivity();
             TransferActivity ta = new TransferActivity();
             ReceivePO rpo = new ReceivePO();
+            InventoryCountActivity ic = new InventoryCountActivity();
 
             switch (module) {
                 case 1:
@@ -1360,6 +1414,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     ca.setItem(_item);
                     ca.setWO(_jobWo);
                     break;
+                case 6:
+                    ic.setWHSE(_whse);
                 default:
                     break;
             }
