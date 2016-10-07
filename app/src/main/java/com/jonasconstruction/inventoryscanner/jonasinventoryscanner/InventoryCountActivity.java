@@ -1,6 +1,7 @@
 package com.jonasconstruction.inventoryscanner.jonasinventoryscanner;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -51,8 +52,7 @@ public class InventoryCountActivity extends Activity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //TODO - save scanned upc to db and increment if already exists
-                //save();
+
             }
 
             @Override
@@ -74,6 +74,20 @@ public class InventoryCountActivity extends Activity {
             _index = _listView.getItemIdAtPosition(position);
 
             //TODO - either decrement the count or delete the whole record so they have to recount the part
+            //dialog - decrement by 1 or remove part and recount
+            AlertDialog.Builder aDB = new AlertDialog.Builder(this);
+            aDB.setTitle("Part Correction");
+            aDB.setMessage("A missing dependency has been detected.  Click YES to install.");
+            aDB.setPositiveButton("Decrement", (dialog, which) -> {
+                //decrement part count
+            });
+            aDB.setNeutralButton("Remove", (dialog, which) -> {
+                //remove part count
+            });
+            aDB.setNegativeButton("Cancel", (dialog, which) -> {
+                //cancel
+            });
+            aDB.show();
         });
     }
 
