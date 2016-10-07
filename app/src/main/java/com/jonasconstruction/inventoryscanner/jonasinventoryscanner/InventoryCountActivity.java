@@ -312,6 +312,8 @@ public class InventoryCountActivity extends Activity implements AdapterView.OnIt
      * Populate list view.
      */
     void populateListView() {
+        // TODO - add ability to switch between multiple warehouses.  When selecting a new warehouse
+        // we will need to repopulate the list with the data related to selected warehouse.
         DatabaseHandler db = new DatabaseHandler(this);
         db.populateInventoryCount();
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, _recordData);
