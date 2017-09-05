@@ -95,7 +95,11 @@ public class LoginActivity extends Activity {
                 if (_loginPassword.getText().toString().equals("gjadmin")) {
                     adminLogin();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Incorrect Password", LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Incorrect Admin Login", LENGTH_LONG).show();
+                }
+            } else if (_loginUsername.getText().toString().equals("brad")) {
+                if (_loginPassword.getText().toString().equals("bass")) {
+                    testUserLogin();
                 }
             } else {
                 rememberMe();
@@ -115,6 +119,15 @@ public class LoginActivity extends Activity {
     //*
     private void adminLogin() {
         _isAdminLogin = true;
+        Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
+        homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(homeIntent);
+        this.finish();
+    }//*/
+
+    //*
+    private void testUserLogin() {
+        _isAdminLogin = false;
         Intent homeIntent = new Intent(getApplicationContext(), HomeActivity.class);
         homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(homeIntent);
@@ -183,7 +196,7 @@ public class LoginActivity extends Activity {
         return true;
     }
 
-    class LoginOperation extends AsyncTask<String, Void, String> {
+    private class LoginOperation extends AsyncTask<String, Void, String> {
 
         private ProgressDialog Dialog = new ProgressDialog(LoginActivity.this);
         SoapPrimitive response;
